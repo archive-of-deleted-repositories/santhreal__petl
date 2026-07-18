@@ -120,3 +120,10 @@ def test_fillleft_headerless():
     actual = fillleft(table, 'foo')
     expect = []
     ieq(expect, actual)
+
+
+def test_filldown_header_only():
+    table = (('foo', 'bar'),)
+    actual = filldown(table)
+    expect = (('foo', 'bar'),)
+    ieq(expect, actual)
